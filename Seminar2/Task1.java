@@ -1,4 +1,4 @@
-package Seminar1.Seminar2;
+package Seminar2;
 
 import java.util.Arrays;
 import java.util.Scanner;

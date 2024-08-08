@@ -2,7 +2,7 @@
 //  Обработайте возможные исключительные ситуации. “Битые” значения в
 // исходном массиве считайте нулями. Можно внести в код правки, которые считаете необходимыми.
 
-package Seminar1.Seminar2;
+package Seminar2;
 
 public class Task2 {
     public static void main(String[] args) {

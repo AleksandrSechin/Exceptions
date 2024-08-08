@@ -12,7 +12,7 @@
 // Если на каком-то месте встречается символ, отличный от числа или ?, бросить подходящее исключение.
 // Записать в тот же файл данные с замененными символами ?
 
-package Seminar1.Seminar2;
+package Seminar2;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -29,16 +29,15 @@ public class Task3 {
 
     public static void writeData(String FileName, HashMap<String, Integer> map) {
         try {
-            File file = new File (FileName);
+            File file = new File(FileName);
             FileWriter writer = new FileWriter(file);
 
-            for (String name: map.keySet()){
+            for (String name : map.keySet()) {
                 int value = map.get(name);
-                writer.write(name + "-" + "\n");
+                writer.write(name + "=" + value + "\n");
             }
             writer.close();
-        }
-        catch (IOException e){
+        } catch (IOException e) {
             System.out.println("Ошибка записи!");
         }
     }
@@ -50,7 +49,7 @@ public class Task3 {
             Scanner scanner = new Scanner(file);
             while (scanner.hasNextLine()) {
                 String line = scanner.nextLine();
-                String[] parts = line.split("-");
+                String[] parts = line.split("=");
                 if (parts.length != 2) {
                     throw new IllegalArgumentException("Неверные данные в строке:" + line);
                 }
